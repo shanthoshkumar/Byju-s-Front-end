@@ -4,7 +4,7 @@ Instructions:
 
     1.Empty Fields from the api end point (https://api.myjson.com/bins/kez8a) are set to "Not Mentioned" in this project.
      
-    2.At a time user can able to Filter jobs using Only one Criteria (experience or location or skills or company name).For example if a user wishes to Filter jobs based on experience he can select from the experience dropdown but the other dropdowns are set to default as "select" and then click the "select" button.
+    2.At a time user can able to Filter jobs using Only one Criteria (experience or location or skills or company name).For example if a user wishes to Filter jobs based on experience he can select from the experience dropdown but the other dropdowns are set to default as "select" and then click the "Search" button.
     
 Project Setup = >
 
