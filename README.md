@@ -5,13 +5,14 @@ Assumption
 
 
 Project Setup = >
+
     1. Need to install node v10.15.3.
 
     2. Install angular using npm install -g @angular/cli@6
 
     3. Install Http-server package.
-    
-    4. Install Node Modules by npm i inside the (Byju-s-Front-end) folder.
+
+    4. Install Node Modules by npm install (or) npm i inside the (Byju-s-Front-end) folder.
 
 
 Run the Project = >
