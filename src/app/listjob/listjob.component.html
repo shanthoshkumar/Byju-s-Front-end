@@ -1,0 +1,53 @@
+
+   <div class="container">
+     <div class="row">
+       <div class="row-sm-2">
+         <div class="col-sm-3"></div>
+         <div class="col-sm-6">
+          <span><h1>Total Number of Jobs Found {{ job_pool.length }}</h1></span>
+        </div>
+         <div class="col-sm-3"></div>
+         
+       </div>
+       <div class="row-sm-10">
+          <div class="col-sm-12" style="margin-top:40px;overflow-x:auto;height:500px">
+              <table class="table table-bordered">
+              <thead >
+                  <tr>
+                      <th>applylink</th>
+                      <th>companyname</th>
+                      <th>created</th>
+                      <th>enddate</th>
+                      <th>experience</th>
+                      <th>jd</th>
+                      <th>location</th>
+                      <th>salary</th>
+                      <th>skills</th>
+                      <th>source</th>
+                      <th>startdate</th>
+                      <th>title</th>
+                      <th>type</th>
+                    </tr> 
+                </thead>
+                <tbody >
+                    <tr *ngFor="let job of job_pool;let i=index">
+                        <td>{{ job.applylink }}</td>
+                        <td>{{ job.companyname }}</td>
+                        <td>{{ job.created }}</td>
+                        <td>{{ job.enddate }}</td>
+                        <td>{{ job.experience }}</td>
+                        <td>{{ job.jd }}</td>
+                        <td>{{ job.location }}</td>
+                        <td>{{ job.salary }}</td>
+                        <td>{{ job.skills }}</td>
+                        <td>{{ job.source }}</td>
+                        <td>{{ job.startdate }}</td>
+                        <td>{{ job.title }}</td>
+                        <td>{{ job.type }}</td>
+                      </tr>   
+                      </tbody>
+                </table>
+              </div>
+       </div>
+     </div>
+   </div>

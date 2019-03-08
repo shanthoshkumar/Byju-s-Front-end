@@ -1,0 +1,82 @@
+ <div class="container">
+   <div class="row">
+     <div class="row-sm-2">
+       <div class="col-sm-2">&nbsp;&nbsp;&nbsp;&nbsp;Based on Experience
+          <select #expoptions (change)="filter_experience(expoptions.value);" class="form-control" >
+              <option>Select</option>
+              <option *ngFor="let experience of job_experiences" value={{experience}} style="color: blue">{{ experience }}</option>
+          </select>
+       </div>
+       <div class="col-sm-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Based on Location
+          <select #locoptions (change)="filter_location(locoptions.value);" class="form-control" >
+              <option>Select</option>
+              <option *ngFor="let location of job_locations" value={{location}} style="color: blue">{{ location }}</option>
+          </select>
+       </div>
+       <div class="col-sm-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Based on Skills
+        <select #skillset (change)="filter_skill(skillset.value);" class="form-control" >
+            <option>Select</option>
+            <option *ngFor="let skill of job_skills" value={{skill}} style="color: blue">{{ skill }}</option>
+        </select>
+       </div>
+       <div class="col-sm-2">Based on Company Name
+          <select #companyname (change)="filter_company(companyname.value);" class="form-control" >
+              <option>Select</option>
+              <option *ngFor="let company of job_companies" value={{company}} style="color: blue">{{ company }}</option>
+          </select>
+       </div>
+        <div class="col-sm-1">
+          <input type="button" value="Search" class="form-control searchbtn" style="margin-top: 19px" (click)="filteration_using_keys()">
+      </div>
+      <div class="col-sm-3">
+        <h4>Jobs Based On User Search</h4> <p id="jobcount" style="padding-left: 110px;color: red"></p>
+      </div>
+         </div>
+     <div class="row-sm-9">
+        <div class="container">
+            <div class="row">
+              <div class="col-sm-12" style="margin-top:40px;overflow-x:auto;max-height: 550px">
+              <table class="table table-bordered" >
+              <thead >
+                  <tr>
+                      <th>Sno</th>
+                      <th>applylink</th>
+                      <th>companyname</th>
+                      <th>created</th>
+                      <th>enddate</th>
+                      <th>experience</th>
+                      <th>jd</th>
+                      <th>location</th>
+                      <th>salary</th>
+                      <th>skills</th>
+                      <th>source</th>
+                      <th>startdate</th>
+                      <th>title</th>
+                    <th>type</th>
+                    </tr> 
+                </thead>
+                <tbody >
+                    <tr *ngFor="let job of filtered_jobs;let i=index">
+                        <td>{{ i+1 }}</td>
+                        <td>{{ job.applylink }}</td>
+                        <td>{{ job.companyname }}</td>
+                        <td>{{ job.created }}</td>
+                        <td>{{ job.enddate }}</td>
+                        <td>{{ job.experience }}</td>
+                        <td>{{ job.jd }}</td>
+                        <td>{{ job.location }}</td>
+                        <td>{{ job.salary }}</td>
+                        <td>{{ job.skills }}</td>
+                        <td>{{ job.source }}</td>
+                        <td>{{ job.startdate }}</td>
+                        <td>{{ job.title }}</td>
+                        <td>{{ job.type }}</td>                                         
+                      </tr>   
+                      </tbody>
+                </table>
+              </div>
+            </div>
+           </div>
+     </div>
+   </div>
+ </div>
